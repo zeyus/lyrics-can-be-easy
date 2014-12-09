@@ -11,6 +11,15 @@ Using python 3 and the wonderful 'pymarkovchain' in conjunction with http://api.
 
 The snippet of lyrics is pulled via the API (unfortunately just a "preview" but it would be easy to integrate this into other services) and then fed into the markov chain generator to print out a line or lines of pseudo-lyrics
 
+**APIs**
+
+Currently support:
+
+- lyricsnmusic api (get key here: http://www.lyricsnmusic.com/api_keys/new)
+- wikia lyrics api (documentation here: http://api.wikia.com/wiki/LyricWiki_API)
+
+default is lyricsnmusic.
+
 **Requirements**
 
 - pymarkovchain
@@ -25,18 +34,22 @@ The snippet of lyrics is pulled via the API (unfortunately just a "preview" but 
 
 outputs:
 ```
-usage: lyrics_can_be_easy.py [-h] --key KEY [--numlines NUMLINES]
+usage: lyrics_can_be_easy.py [-h] [--key KEY]
+                             [--provider {lyricsnmusic,wikia}]
+                             [--numlines NUMLINES]
                              "Artist" ["Artist" ...]
 
 Generate random song lyrics based on an artist/group's vocabulary
 
 positional arguments:
-  "Artist"             Artist(s) to base dictionary on
+  "Artist"              Artist(s) to base dictionary on
 
 optional arguments:
-  -h, --help           show this help message and exit
-  --key KEY            API key for lyricsnmusic.com
-  --numlines NUMLINES  number of "sentences" to generate
+  -h, --help            show this help message and exit
+  --key KEY             API key if using lyricsnmusic.com
+  --provider {lyricsnmusic,wikia}
+                        API provider
+  --numlines NUMLINES   number of "sentences" to generate
 ```
 
 
