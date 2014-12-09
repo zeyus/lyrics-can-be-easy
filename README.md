@@ -20,6 +20,11 @@ Currently support:
 
 default is lyricsnmusic.
 
+**known issues**
+
+Full lyrics cannot be retrieved from free API service, so you'll have to live with 1/7th of the song :(
+
+
 **Requirements**
 
 - pymarkovchain
@@ -53,7 +58,7 @@ optional arguments:
 ```
 
 
-*Example*
+**Example**
 
 ```
 $ ./lyrics_can_be_easy.py --numlines 10  --key abcdefg1234567890 "tool" "a perfect circle"
