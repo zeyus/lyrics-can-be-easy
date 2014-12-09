@@ -32,6 +32,7 @@ cache_db_name = hashlib.md5(' '.join(sorted_artists).encode('utf-8')).hexdigest(
 mc = MarkovChain(cache_db_name)
 if not os.path.isfile(cache_db_name):
     print('No cache DB found, generating', file=sys.stderr)
+    all_lyrics = ''
     for artist in sorted_artists:
         print('Retrieving song data for "{}" from api.lyricsnmusic.com'.format(artist), file=sys.stderr)
         uri = "http://api.lyricsnmusic.com/songs?{}"
@@ -45,7 +46,6 @@ if not os.path.isfile(cache_db_name):
         response = urllib.request.urlopen(uri)
         songdata = json.loads(response.read().decode('utf-8'))
 
-        all_lyrics = ''
         for song in songdata:
             snip = re.sub(r'(\[[^\]]+\])|(\s[^\s\.]*\.\.\.\s*$)', '', song['snippet'])
 
