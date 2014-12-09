@@ -1,4 +1,5 @@
-=== Oh my... ===
+Lyrics can be easy
+===================
 
 Have you hit the edge of your creativity? Writing music got you down? Want to sound like your favourite artists? 
 
@@ -6,21 +7,22 @@ Enter 'lyrics can be easy,' your one stop lyrics production shop.
 
 Using python 3 and the wonderful 'pymarkovchain' in conjunction with http://api.lyricsnmusic.com/ this script is incredibly small and fairly fast.
 
-*How it works*
+**How it works**
 
 The snippet of lyrics is pulled via the API (unfortunately just a "preview" but it would be easy to integrate this into other services) and then fed into the markov chain generator to print out a line or lines of pseudo-lyrics
 
-*Requirements*
+**Requirements**
 
 - pymarkovchain
 
 ```pip install pymarkovchain```
 
-*Usage*
+**Usage**
 
 ```
 ./lyrics_can_be_easy.py -h
 ```
+
 outputs:
 ```
 usage: lyrics_can_be_easy.py [-h] --key KEY [--numlines NUMLINES]
