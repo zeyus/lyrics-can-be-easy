@@ -58,7 +58,51 @@ optional arguments:
 ```
 
 
-**Example**
+**Examples**
+
+```
+$ python3 lyrics_can_be_easy.py --provider wikia --numlines 30 "Matchbox 20" "Opeth" > lyrics.txt
+Cache DB found, using saved data
+=====♫♫♫♫♫♫♫♫♫=====
+
+
+
+
+$  cat lyrics.txt
+You're like your head around
+Morning falls like you
+Confessor of pain in seconds of my presence
+You left for you know if I turned you
+And she wrote down
+to my window
+Talk like your seclusion
+White summer rain, in
+And I've got you run
+[reversed
+Now I can't get
+Dead
+Calling the way
+The last
+Aching
+I
+These matters
+Like the quiet moments
+By the sill
+Enduring yet
+And I'm walking behind with shadows on the start to let you go
+I had a wound that whole lot
+Halting at the words I fall down word you think you
+But now
+And I said I think you're already leaving
+I wrote
+Twisted face
+Don't you shut down under the vile
+Baying behind you wanna believe
+Don't it came passing by
+
+$ 
+```
+
 
 ```
 $ ./lyrics_can_be_easy.py --numlines 10  --key abcdefg1234567890 "tool" "a perfect circle"
