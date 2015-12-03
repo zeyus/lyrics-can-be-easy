@@ -6,7 +6,7 @@ from urllib.parse import urlencode
 import re
 
 class wikia(ApiBase):
-    api_endpoint = "http://lyrics.wikia.com/api.php?fmt=realjson&"
+    api_endpoint = "http://lyrics.wikia.com/api.php?action=lyrics&fmt=realjson&"
 
     def get_lyrics(self, artist):
         params = {
